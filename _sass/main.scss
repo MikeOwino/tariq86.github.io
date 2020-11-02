@@ -60,7 +60,7 @@ a {
 }
 
 .highlight-title {
-  color: $primary-color;
+  color: $text-color;
   text-shadow: 0.25rem 0.25rem 0.25rem $primary-color;
 }
 
@@ -712,9 +712,11 @@ a {
       padding: 0.5rem 0.25rem;
       text-align: center;
       width: 21%;
+      transition: all 250ms;
 
       &:hover {
         letter-spacing: 0.25rem;
+        font-size: 1.1rem;
       }
     }
 
