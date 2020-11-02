@@ -9,7 +9,7 @@
   weight: 5
 
 - name: React Native
-  weight: 3
+  weight: 2
 
 - name: Three.js
   weight: 1
@@ -27,7 +27,7 @@
   weight: 2
 
 - name: Express
-  weight: 3
+  weight: 2
 
 - name: Django
   weight: 1
