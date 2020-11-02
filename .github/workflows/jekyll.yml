@@ -24,6 +24,10 @@ jobs:
           key: ${{ runner.os }}-npm-${{ hashFiles('**/package-lock.json') }}
           restore-keys: |
             ${{ runner.os }}-npm-
+      - name: 💽 Install NPM packages
+        run: npm ci
+      - name: 🛠️ Compile assets
+        run: npm run build --if-present
       - name: 📦 Cache Ruby gems
         uses: actions/cache@v2
         with:
@@ -31,10 +35,10 @@ jobs:
           key: ${{ runner.os }}-gem-${{ hashFiles('**/Gemfile.lock') }}
           restore-keys: |
             ${{ runner.os }}-gem-
-      - name: 💽 Install NPM dependencies
-        run: npm ci
-      - name: 🛠️ Compile assets
-        run: npm run build --if-present
+      - name: 💽 Install Ruby gems
+        run: |
+          bundle config path vendor/bundle
+          bundle install --jobs 4 --retry 3
       - name: 🚀 Build/Deploy the site
         run: |
           docker run \
