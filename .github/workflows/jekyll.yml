@@ -11,7 +11,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
+      - name: ⬇️ Check out code
+        uses: actions/checkout@v2
       - name: ✔️ Use Node.js v12
         uses: actions/setup-node@v1
         with:
@@ -39,7 +40,6 @@ jobs:
           docker run \
           -v ${{ github.workspace }}:/srv/jekyll -v ${{ github.workspace }}/_site:/srv/jekyll/_site \
           jekyll/builder:latest /bin/bash -c "chmod 777 /srv/jekyll && jekyll build --future"
-        with:
-          GITHUB_TOKEN: ${{ secrets.JEKYLL_GITHUB_TOKEN }}
         env:
+          ACCESS_TOKEN: ${{ secrets.JEKYLL_GITHUB_TOKEN }}
           JEKYLL_GITHUB_TOKEN: ${{ secrets.JEKYLL_GITHUB_TOKEN }}
