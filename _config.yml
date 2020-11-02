@@ -3,6 +3,10 @@
 # GENERAL SITE SETTINGS
 # title: This will be displayed as the website's name in your browser tab.
 title: Tariq's Portfolio
+# app_title: The app title, if saved to a mobile homescreen (short title)
+app_title: "@tariq86"
+# app_color: The app color, for mobile themes, etc.
+app_color: "#282c34"
 # description: This will be meta HTML tag content. This can be ignored.
 description: Tariq's personal website, powered by Github Pages and Jekyll
 # baseurl: The subpath of your site
