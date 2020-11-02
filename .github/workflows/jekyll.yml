@@ -19,16 +19,16 @@ jobs:
       - name: Cache NPM packages
         uses: actions/cache@v2
         with:
-          path: node_modules
+          path: ~/.npm
           key: ${{ runner.os }}-npm-${{ hashFiles('**/package-lock.json') }}
           restore-keys: |
             ${{ runner.os }}-npm-
       - name: Cache Ruby gems
         uses: actions/cache@v2
         with:
-            path: vendor/bundle
-            key: ${{ runner.os }}-gem-${{ hashFiles('**/Gemfile.lock') }}
-            restore-keys: |
+          path: vendor/bundle
+          key: ${{ runner.os }}-gem-${{ hashFiles('**/Gemfile.lock') }}
+          restore-keys: |
             ${{ runner.os }}-gem-
       - name: Install NPM dependencies
         run: npm ci
