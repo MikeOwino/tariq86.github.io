@@ -6,31 +6,52 @@
 #   weight: 5
 
 - name: Git
-  weight: 5
-
-- name: Bash
   weight: 3
 
-- name: Scrum
+- name: Github
+  weight: 1
+
+- name: SVN
+  weight: 1
+
+- name: Bash
+  weight: 2
+
+- name: Docker
+  weight: 3
+
+- name: Vagrant
+  weight: 2
+
+- name: VirtualBox
+  weight: 1
+
+- name: Agile/SCRUM
   weight: 3
 
 - name: Travis CI
   weight: 1
 
-- name: Jenkins
+- name: CircleCI
   weight: 1
 
-- name: Chrome DevTools
+- name: Jenkins
   weight: 2
+
+- name: Amazon Web Services (AWS)
+  weight: 4
+
+- name: Browser DevTools
+  weight: 1
 
 - name: npm
   weight: 2
 
 - name: gulp
-  weight: 4
+  weight: 1
 
 - name: VS Code
-  weight: 3
+  weight: 1
 
 - name: Postman
-  weight: 4
+  weight: 2

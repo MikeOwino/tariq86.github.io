@@ -5,17 +5,23 @@
 # - name: Framework
 #   weight: 5
 
-- name: Angular
+- name: React
   weight: 5
 
-- name: AngularJS
+- name: React Native
   weight: 3
 
-- name: React
+- name: Three.js
+  weight: 1
+
+- name: Vue
+  weight: 5
+
+- name: Laravel
   weight: 4
 
 - name: Node
-  weight: 1
+  weight: 4
 
 - name: Flutter
   weight: 2
@@ -26,8 +32,14 @@
 - name: Django
   weight: 1
 
-- name: Spring
+- name: Flask
+  weight: 1
+
+- name: Bootstrap
+  weight: 1
+
+- name: Foundation
   weight: 2
 
-- name: Rails
-  weight: 4
+- name: Tailwind
+  weight: 1

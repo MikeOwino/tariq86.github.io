@@ -13,21 +13,18 @@
 #     - tag: AngularJS
 #     - tag: Node
 
-- name: project X
-  descr: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam"
-  demo: https://example.com/
+- name: Freerange Mobile
+  descr: "For a low monthly fee without long-term contracts, FreeRange Mobile gives you the freedom to make and receive unlimited calls and text to any phone number between US, Mexico, and Canada. This unbeatable value comes with a US phone number, hassle-free service, and an unparalleled call quality."
+  demo: https://freerangemobile.net
   tags:
-    - tag: MongoDB
-    - tag: Express
-    - tag: AngularJS
-    - tag: Node
+    - tag: PHP
+    - tag: Laravel
+    - tag: Vue
 
-- name: project Y
-  descr: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam"
-  demo: https://example.com/
+- name: HelloEarth
+  descr: "According to Harris Interactive, nearly 60 million people in the United States, or one out of every four adults, makes international calls, with just over half of these callers using landlines or VoIP platforms. NetworkIP has a new over-the-top (OTT) international calling solution for mobile operators. competing directly with the “OUT” non-peer-to-peer products of Viber, Skype, Boss Revolution and Vonage. There is no integration required to get started or equipment to buy. NetworkIP’s solution enables Mobile Network Operators (MNOs) to offer a suite of very competitive OTT international calling options directly to their subscribers with smartphones."
+  demo: https://helloearth.mobi
   tags:
-    - tag: Python
-    - tag: Django
-
-- name: project Z
-  descr: "You can also set a project without demo link and no tags"
+    - tag: PHP
+    - tag: Yii
+    - tag: jQuery UI
