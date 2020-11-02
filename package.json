@@ -4,7 +4,7 @@
     "description": "Tariq's Portfolio Site",
     "scripts": {
         "dev": "gulp",
-        "prod": "gulp build"
+        "build": "gulp build"
     },
     "author": "Tariq Abusheikh <tariq.abusheikh@gmail.com>",
     "dependencies": {
