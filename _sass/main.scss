@@ -309,7 +309,7 @@ a {
         colorEmail 1s linear forwards;
     }
     .social-svg {
-      fill: #d44638;
+      fill: $primary-color;
     }
   }
 
@@ -629,7 +629,13 @@ a {
     }
   }
 
-  .black:hover {
+  .email:hover {
+    .social-svg {
+      fill: $primary-color;
+    }
+  }
+
+  .github:hover {
     .social-svg {
       fill: #000;
     }
