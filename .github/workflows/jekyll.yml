@@ -12,32 +12,34 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-      - name: Use Node.js v12
+      - name: ✔️ Use Node.js v12
         uses: actions/setup-node@v1
         with:
           node-version: "12.x"
-      - name: Cache NPM packages
+      - name: 📦 Cache NPM packages
         uses: actions/cache@v2
         with:
           path: ~/.npm
           key: ${{ runner.os }}-npm-${{ hashFiles('**/package-lock.json') }}
           restore-keys: |
             ${{ runner.os }}-npm-
-      - name: Cache Ruby gems
+      - name: 📦 Cache Ruby gems
         uses: actions/cache@v2
         with:
           path: vendor/bundle
           key: ${{ runner.os }}-gem-${{ hashFiles('**/Gemfile.lock') }}
           restore-keys: |
             ${{ runner.os }}-gem-
-      - name: Install NPM dependencies
+      - name: 💽 Install NPM dependencies
         run: npm ci
-      - name: Compile assets
+      - name: 🛠️ Compile assets
         run: npm run build --if-present
-      - name: Build the site in the jekyll/builder container
+      - name: 🚀 Build/Deploy the site
         run: |
           docker run \
           -v ${{ github.workspace }}:/srv/jekyll -v ${{ github.workspace }}/_site:/srv/jekyll/_site \
           jekyll/builder:latest /bin/bash -c "chmod 777 /srv/jekyll && jekyll build --future"
+        with:
+          GITHUB_TOKEN: ${{ secrets.JEKYLL_GITHUB_TOKEN }}
         env:
           JEKYLL_GITHUB_TOKEN: ${{ secrets.JEKYLL_GITHUB_TOKEN }}
