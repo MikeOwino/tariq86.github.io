@@ -13,13 +13,24 @@
 #     - tag: AngularJS
 #     - tag: Node
 
-- name: Freerange Mobile
-  descr: "For a low monthly fee without long-term contracts, FreeRange Mobile gives you the freedom to make and receive unlimited calls and text to any phone number between US, Mexico, and Canada. This unbeatable value comes with a US phone number, hassle-free service, and an unparalleled call quality."
-  demo: https://freerangemobile.net
+- name: Platform Six
+  descr: "A turnkey white-label platform for long distance calling apps (Android, iOS, and Web). <strong>Examples</strong>:<br />
+  <a href='https://freerangemobile.net'>Freerange Mobile</a><br />
+  <a href='https://app.black011.com'>Black011</a><br />
+  <a href='https://justmeet.live'>JustMeet Conferencing</a>"
   tags:
     - tag: PHP
     - tag: Laravel
     - tag: Vue
+
+# - name: Freerange Mobile
+#   descr: "For a low monthly fee without long-term contracts, FreeRange Mobile gives you the freedom to make and receive unlimited calls and text to any phone number between US, Mexico, and Canada. This unbeatable value comes with a US phone number, hassle-free service, and an unparalleled call quality."
+#   demo: https://freerangemobile.net
+#   tags:
+#     - tag: PHP
+#     - tag: Laravel
+#     - tag: Vue
+#     - tag: Platform Six
 
 - name: HelloEarth
   descr: "According to Harris Interactive, nearly 60 million people in the United States, or one out of every four adults, makes international calls, with just over half of these callers using landlines or VoIP platforms. NetworkIP has a new over-the-top (OTT) international calling solution for mobile operators. competing directly with the “OUT” non-peer-to-peer products of Viber, Skype, Boss Revolution and Vonage. There is no integration required to get started or equipment to buy. NetworkIP’s solution enables Mobile Network Operators (MNOs) to offer a suite of very competitive OTT international calling options directly to their subscribers with smartphones."

@@ -30,8 +30,7 @@
     - tag: React
     - tag: Node
     - tag: Heroku
-    - tag: Github
-  timeline-side: right
+  timeline-side: left
 
 - title: NetworkIP
   title-url: https://www.networkip.net
@@ -46,7 +45,6 @@
     - tag: MySQL
     - tag: Informix
     - tag: AWS
-    - tag: Github
   timeline-side: right
 
 - title: St. Edward's University
