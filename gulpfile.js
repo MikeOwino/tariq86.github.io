@@ -1,12 +1,11 @@
-var gulp = require('gulp');
-var browserSync = require('browser-sync');
-var sass = require('gulp-sass');
-var cssnano = require('gulp-cssnano');
-var prefix = require('gulp-autoprefixer');
-var concat = require('gulp-concat');
-var rename = require('gulp-rename');
-var uglify = require('gulp-uglify');
-var cp = require('child_process');
+const gulp = require('gulp');
+const browserSync = require('browser-sync');
+const sass = require('gulp-sass');
+const cssnano = require('gulp-cssnano');
+const prefix = require('gulp-autoprefixer');
+const rename = require('gulp-rename');
+const uglify = require('gulp-uglify');
+const cp = require('child_process');
 
 /**
  * Compile and minify sass
@@ -20,20 +19,11 @@ function styles() {
                 onError: browserSync.notify
             })
         )
-        .pipe(prefix(['last 3 versions', '> 1%', 'ie 8'], { cascade: true }))
+        .pipe(prefix(['last 3 versions', '> 1%'], { cascade: true }))
         .pipe(rename('main.min.css'))
         .pipe(cssnano())
         .pipe(gulp.dest('_site/assets/css/'))
         .pipe(browserSync.reload({ stream: true }))
-        .pipe(gulp.dest('assets/css'));
-}
-
-function stylesVendors() {
-    return gulp
-        .src(['_sass/vendors/*.css'])
-        .pipe(concat('vendors.min.css'))
-        .pipe(cssnano())
-        .pipe(gulp.dest('_site/assets/css/'))
         .pipe(gulp.dest('assets/css'));
 }
 
@@ -47,15 +37,6 @@ function scripts() {
         .pipe(uglify())
         .pipe(gulp.dest('_site/assets/js'))
         .pipe(browserSync.reload({ stream: true }))
-        .pipe(gulp.dest('assets/js'));
-}
-
-function scriptsVendors() {
-    return gulp
-        .src(['_js/vendors/*.js'])
-        .pipe(concat('vendors.min.js'))
-        .pipe(uglify())
-        .pipe(gulp.dest('_site/assets/js'))
         .pipe(gulp.dest('assets/js'));
 }
 
@@ -122,9 +103,9 @@ function watchStyles() {
     gulp.watch(['_sass/*.scss'], styles);
 }
 
-var compile = gulp.parallel(styles, stylesVendors, scripts, scriptsVendors);
-var serve = gulp.series(compile, jekyll, browserSyncServe);
-var watch = gulp.parallel(watchData, watchMarkup, watchScripts, watchStyles);
+const compile = gulp.parallel(styles, scripts);
+const serve = gulp.series(compile, jekyll, browserSyncServe);
+const watch = gulp.parallel(watchData, watchMarkup, watchScripts, watchStyles);
 
 /**
  * Default task, running just `gulp` will compile the sass,
