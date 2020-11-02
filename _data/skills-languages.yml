@@ -5,8 +5,11 @@
 # - name: Language
 #   weight: 5
 
-- name: JavaScript/ES6
+- name: ES6
   weight: 5
+
+- name: Javascript
+  weight: 3
 
 - name: PHP
   weight: 5
@@ -29,8 +32,8 @@
 - name: Dart
   weight: 1
 
-- name: Flutter
-  weight: 1
-
 - name: Swift
-  weight: 3
+  weight: 2
+
+- name: Go
+  weight: 1

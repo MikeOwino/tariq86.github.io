@@ -26,7 +26,10 @@
 - name: VirtualBox
   weight: 1
 
-- name: Agile/SCRUM
+- name: Agile
+  weight: 3
+
+- name: SCRUM
   weight: 3
 
 - name: Travis CI
@@ -50,8 +53,17 @@
 - name: gulp
   weight: 1
 
+- name: webpack
+  weight: 2
+
 - name: VS Code
   weight: 1
 
 - name: Postman
+  weight: 2
+
+- name: Expo
+  weight: 1
+
+- name: Jetbrains IDEs
   weight: 2

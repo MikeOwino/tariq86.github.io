@@ -5,26 +5,31 @@
 # - name: Framework
 #   weight: 5
 
+### Client Frameworks ###
 - name: React
   weight: 5
-
-- name: React Native
-  weight: 2
-
-- name: Three.js
-  weight: 1
 
 - name: Vue
   weight: 5
 
+- name: Three.js
+  weight: 2
+
+- name: Apollo
+  weight: 1
+
+- name: React Native
+  weight: 2
+
+- name: Flutter
+  weight: 2
+
+### Server Frameworks ###
 - name: Laravel
   weight: 4
 
 - name: Node
   weight: 4
-
-- name: Flutter
-  weight: 2
 
 - name: Express
   weight: 2
@@ -35,11 +40,15 @@
 - name: Flask
   weight: 1
 
+### CSS Frameworks ###
 - name: Bootstrap
   weight: 1
 
 - name: Foundation
-  weight: 2
+  weight: 1
 
 - name: Tailwind
+  weight: 1
+
+- name: Materialize
   weight: 1
