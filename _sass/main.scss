@@ -14,7 +14,7 @@ $font-size-base: 1rem !default;
 $font-size-h1: 2rem !default;
 $font-weight-strong: 600;
 $text-color: #dcdfe4 !default;
-$transition: all 0.2s ease-in-out;
+$transition: all 0.5s ease-in-out;
 $bg-color: #282c34;
 $border-radius: 2px;
 $card-bg-color: linear-gradient(
@@ -153,7 +153,6 @@ a {
   height: 100%;
   justify-content: center;
   left: 0;
-  margin: 0.5rem;
   padding: 0.5rem;
   position: absolute;
   right: 0;
@@ -244,6 +243,20 @@ a {
   display: flex;
   height: 100%;
   text-align: center;
+
+  .landing-inner {
+    max-width: 75%;
+    margin: 0 auto;
+    padding: 0.75rem;
+    background: rgba(0, 0, 0, 0.25);
+    border-radius: $border-radius;
+  }
+
+  #txt-rotate {
+    border-bottom: 1px solid $text-color;
+    padding-bottom: 0.75rem;
+    margin: 0 0 0.75rem 0;
+  }
 }
 
 .landing-title {
@@ -263,9 +276,9 @@ a {
     color: $text-color;
     position: relative;
     height: 3rem;
+    width: 3rem;
     line-height: 3rem;
     margin: 0.25rem;
-    width: 3rem;
 
     .circle {
       animation: outWaveOut 1s cubic-bezier(0.42, 0, 0.58, 1) forwards;
@@ -287,7 +300,10 @@ a {
     }
 
     .label {
-      display: none;
+      position: relative;
+      top: -4rem;
+      opacity: 0;
+      transition: $transition;
     }
 
     &:hover {
@@ -305,8 +321,7 @@ a {
       }
 
       .label {
-        display: unset !important;
-        position: relative;
+        opacity: 1;
         top: -2rem;
       }
     }
@@ -339,6 +354,16 @@ a {
     }
     .social-svg {
       fill: #1da1f2;
+    }
+  }
+
+  .pdf:hover {
+    .circle {
+      animation: outWaveIn 1s cubic-bezier(0.42, 0, 0.58, 1) forwards,
+        colorPdf 1s linear forwards;
+    }
+    .social-svg {
+      fill: $bg-color;
     }
   }
 
@@ -383,6 +408,12 @@ a {
   @keyframes colorTwitter {
     to {
       stroke: #1da1f2;
+    }
+  }
+
+  @keyframes colorPdf {
+    to {
+      stroke: $bg-color;
     }
   }
 }
@@ -476,42 +507,18 @@ a {
     padding: 1rem 0;
   }
 
-  .hexagon {
+  .circle {
     background: $primary-color;
-    height: 0.5rem;
-    left: 0;
-    margin-left: auto;
-    margin-right: auto;
-    position: absolute;
-    right: 0;
-    top: -0.8rem;
+    height: 1rem;
     width: 1rem;
-  }
-
-  .hexagon:before,
-  .hexagon:after {
-    border-left: 2rem solid transparent;
-    border-right: 2rem solid transparent;
-    border-left-width: 0.5rem;
-    border-right-width: 0.5rem;
-    content: "";
-    left: 0;
+    border-radius: 1rem;
     position: absolute;
-  }
-
-  .hexagon:before {
-    border-bottom: 0.25rem solid $primary-color;
-    top: -0.25rem;
-  }
-
-  .hexagon:after {
-    border-top: 0.25rem solid $primary-color;
-    bottom: -0.25rem;
   }
 
   .flag-wrapper {
     position: relative;
     text-align: center;
+    font-size: 1.25rem;
   }
 
   .flag {
@@ -525,7 +532,7 @@ a {
       transition: $transition;
     }
 
-    span:after {
+    span::after {
       content: "\226B";
       color: $primary-color;
       position: absolute;
@@ -539,9 +546,9 @@ a {
       padding-right: 1.25rem;
     }
 
-    &:hover span:after {
+    &:hover span::after {
       opacity: 1;
-      right: 0;
+      right: -0.25rem;
     }
   }
 
@@ -550,6 +557,7 @@ a {
     display: block;
     line-height: 0.5rem;
     margin-top: 0.3rem;
+    font-size: 1rem;
   }
 
   .time {
@@ -640,7 +648,7 @@ a {
 
   .email:hover {
     .social-svg {
-      fill: $primary-color;
+      fill: $text-color;
     }
   }
 
@@ -783,7 +791,7 @@ a {
       text-align: right;
       width: 18.5rem;
 
-      .hexagon {
+      .circle {
         left: auto;
         right: -1.6rem;
         top: 0.4rem;
@@ -795,8 +803,7 @@ a {
       }
 
       .time-wrapper {
-        float: left;
-        margin-top: -0.1rem;
+        margin-top: 1rem;
       }
 
       .desc {
@@ -809,7 +816,7 @@ a {
       text-align: left;
       width: 18.5rem;
 
-      .hexagon {
+      .circle {
         left: -1.6rem;
         right: auto;
         top: 0.4rem;
@@ -821,8 +828,7 @@ a {
       }
 
       .time-wrapper {
-        float: right;
-        margin-top: -0.1rem;
+        margin-top: 1rem;
       }
 
       .desc {
