@@ -14,7 +14,7 @@ baseurl: ""
 username: Tariq Abusheikh
 # typing_text: This will be typed before 'scroll down for more'.
 # > set this to your job title, e.g. Fullstack Developer
-typing_text: Full-stack Software Engineer
+typing_text: Full-Stack Developer
 # email: Your E-Mail address for the email button.
 email: tariq.abusheikh@gmail.com
 # For every social button you want to display, set your username or userid
@@ -78,7 +78,7 @@ show_contact_card: true
 # contact_title: The will be displayed as the title in the Contact section
 contact_title: Contact
 # contact_description: This will be displayed under the title.
-contact_description: <a class="highlight-link" href="https://github.com/tariq86" target="_blank" rel="noreferrer"> Github </a>
+contact_description: If you have any questions or would like to know more, please don't hesitate to contact me using one of the options below.
 
 # GITHUB-METADATA
 # Set this to your forked repository
