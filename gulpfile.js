@@ -60,21 +60,15 @@ function browserSyncReload(done) {
  * Build Jekyll site
  */
 function jekyll(done) {
-    return cp
-        .spawn(
-            'bundle',
-            [
-                'exec',
-                'jekyll',
-                'build',
-                '--incremental',
-                '--config=_config.yml,_config_dev.yml'
-            ],
-            {
-                stdio: 'inherit'
-            }
-        )
-        .on('close', done);
+    return cp.spawn('bundle', [
+        'exec',
+        'jekyll',
+        'build',
+        '--incremental',
+        '--config=_config.yml,_config_dev.yml'
+    ], {
+        stdio: 'inherit'
+    }).on('close', done);
 }
 
 /**
@@ -113,3 +107,4 @@ const watch = gulp.parallel(watchData, watchMarkup, watchScripts, watchStyles);
  */
 gulp.task('default', gulp.parallel(serve, watch));
 gulp.task('build', compile);
+gulp.task('watch', watch);
