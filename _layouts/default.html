@@ -37,6 +37,10 @@
         integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
     <!-- AOS Script -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    {% if site.linkedin_username != null %}
+    <!-- LinkedIn JS (for badge) -->
+    <script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
+    {% endif %}
     <!-- Site JS -->
     <script src="{{ "/assets/js/app.min.js" | prepend: site.baseurl }}"></script>
 </head>

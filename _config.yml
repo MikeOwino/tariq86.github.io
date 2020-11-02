@@ -82,7 +82,7 @@ show_contact_card: true
 # contact_title: The will be displayed as the title in the Contact section
 contact_title: Contact
 # contact_description: This will be displayed under the title.
-contact_description: If you have any questions or would like to know more, please don't hesitate to contact me using one of the options below.
+contact_description: <div class="LI-profile-badge"  data-version="v1" data-size="large" data-locale="en_US" data-type="vertical" data-theme="dark" data-vanity="tariqabusheikh"><a class="LI-simple-link" href='https://www.linkedin.com/in/tariqabusheikh?trk=profile-badge'>Tariq Abusheikh</a></div>
 
 # GITHUB-METADATA
 # Set this to your forked repository
