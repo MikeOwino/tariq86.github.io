@@ -62,7 +62,13 @@ a {
 
 .highlight-title {
   color: $text-color;
-  text-shadow: 0.25rem 0.25rem 0.25rem $primary-color;
+  text-shadow: 0 0 0.75rem $primary-color;
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    color: $primary-color;
+    text-shadow: 0 0 0.75rem $text-color;
+  }
 }
 
 .highlight-link {
@@ -229,7 +235,10 @@ a {
 /* Landing Page */
 
 #landing {
-  background: $bg-color;
+  background: url("/assets/img/austin.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 0% 50%;
   color: $text-color;
   display: flex;
   height: 100%;
