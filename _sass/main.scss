@@ -478,101 +478,72 @@ a {
 }
 
 /* Timeline Section */
-
-.timeline-wrapper {
-  .timeline {
-    list-style-type: none;
-    padding: 0;
-    position: relative;
-  }
-
-  .timeline:before {
-    background: linear-gradient(
-      to bottom,
-      #f3f3f3 0%,
-      #d5d5d5 8%,
-      #d5d5d5 92%,
-      #f3f3f3 100%
-    );
-    content: " ";
-    height: 100%;
-    left: 50%;
-    margin-left: -0.0675rem;
-    position: absolute;
-    width: 0.125rem;
-    z-index: -1;
-  }
-
-  .timeline li {
-    padding: 1rem 0;
-  }
-
-  .circle {
-    background: $primary-color;
-    height: 1rem;
-    width: 1rem;
-    border-radius: 1rem;
-    position: absolute;
-  }
-
-  .flag-wrapper {
-    position: relative;
-    text-align: center;
-    font-size: 1.25rem;
-  }
-
-  .flag {
-    background: $bg-color;
-    border-radius: $border-radius;
-    font-weight: $font-weight-strong;
-    padding: 0.25rem 0.5rem;
-
-    span {
-      position: relative;
-      transition: $transition;
+.timeline {
+  .timeline__items {
+    .timeline__item {
+      &::after {
+        background-color: $text-color;
+      }
     }
+    .timeline__item--left {
+      text-align: right;
 
-    span::after {
-      content: "\226B";
-      color: $primary-color;
-      position: absolute;
-      opacity: 0;
-      right: -1rem;
-      transition: $transition;
+      .timeline__content {
+        &::after {
+          border-left: 11px solid $text-color;
+        }
+      }
     }
+    .timeline__item--right {
+      text-align: left;
 
-    &:hover span {
-      letter-spacing: 0.05rem;
-      padding-right: 1.25rem;
+      .timeline__content {
+        &::after {
+          border-right: 11px solid $text-color;
+        }
+      }
     }
+    .timeline__content {
+      background-color: $text-color;
+      color: $bg-color;
+      border-radius: $border-radius;
+      box-shadow: 5px 5px 4px #161718, -5px -5px 4px #404346;
 
-    &:hover span::after {
-      opacity: 1;
-      right: -0.25rem;
+      h2 {
+        font-size: 1.4rem;
+        margin: 0.5rem 0;
+      }
+
+      .timeline__date {
+        margin: 0;
+        font-style: italic;
+        font-weight: 400;
+      }
+
+      .timeline__tags {
+        list-style: none;
+        display: inline;
+        margin: 0;
+        padding: 0;
+        font-size: 0.9rem;
+
+        .timeline__tag {
+          display: inline-block;
+          border: 1px dotted $bg-color;
+          padding: 3px;
+          margin: 3px;
+          border-radius: 3px;
+          transition: $transition;
+          cursor: default;
+
+          &:hover {
+            background: $bg-color;
+            color: $text-color;
+            border: 1px dotted $text-color;
+          }
+        }
+      }
     }
-  }
-
-  .time-wrapper {
-    color: $text-color;
-    display: block;
-    line-height: 0.5rem;
-    margin-top: 0.3rem;
-    font-size: 1rem;
-  }
-
-  .time {
-    background: $bg-color;
-    border-radius: $border-radius;
-    display: inline-block;
-    padding: 0.6rem;
-  }
-
-  .desc {
-    background: $bg-color;
-    border-radius: $border-radius;
-    margin: 1em 0 0 0;
-    padding: 0.75em;
-    text-align: center;
   }
 }
 
@@ -779,69 +750,6 @@ a {
     }
   }
 
-  .timeline-wrapper {
-    .timeline {
-      margin: 0 auto;
-      width: 39.25rem;
-    }
-
-    .timeline li:after {
-      clear: both;
-      content: "";
-      display: block;
-    }
-
-    .direction-l {
-      float: left;
-      text-align: right;
-      width: 18.5rem;
-
-      .circle {
-        left: auto;
-        right: -1.6rem;
-        top: 0.4rem;
-      }
-
-      .flag-wrapper {
-        display: inline-block;
-        text-align: right;
-      }
-
-      .time-wrapper {
-        margin-top: 1rem;
-      }
-
-      .desc {
-        text-align: right;
-      }
-    }
-
-    .direction-r {
-      float: right;
-      text-align: left;
-      width: 18.5rem;
-
-      .circle {
-        left: -1.6rem;
-        right: auto;
-        top: 0.4rem;
-      }
-
-      .flag-wrapper {
-        display: inline-block;
-        text-align: left;
-      }
-
-      .time-wrapper {
-        margin-top: 1rem;
-      }
-
-      .desc {
-        text-align: left;
-      }
-    }
-  }
-
   .projects-wrapper {
     display: flex;
     flex-wrap: wrap;
@@ -875,20 +783,6 @@ a {
     width: 21.5%;
   }
 
-  .timeline-wrapper {
-    .timeline {
-      width: 49rem;
-    }
-
-    .direction-l {
-      width: 23.35rem;
-    }
-
-    .direction-r {
-      width: 23.35rem;
-    }
-  }
-
   .projects-wrapper {
     > * {
       width: 45%;
@@ -903,20 +797,6 @@ a {
 
   #skills .filter-button {
     width: 22%;
-  }
-
-  .timeline-wrapper {
-    .timeline {
-      width: 58rem;
-    }
-
-    .direction-l {
-      width: 27.9rem;
-    }
-
-    .direction-r {
-      width: 27.9rem;
-    }
   }
 
   .projects-wrapper {

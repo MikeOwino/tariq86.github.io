@@ -1,13 +1,12 @@
-# > title: Name of your timeline entry, university or work place
-# > title-url: Link to your timeline entry, university or work place
+# > place: The location/place of the timeline entry (i.e. university or employer)
+# > place-url: Link for your timeline entry; i.e. the university or work place website
 # > date: Time span
-# > subtitle: The description under the title
+# > subtitle: Your title at the position; i.e. name of your degree or role
 # > tags: List of tags you want to associate with the entry
-# > timeline-side: The side on which you want to display the entry: left or right
 
 # Example of a timeline entry
-# - title: airbnb
-#   title-url: https://example.com/
+# - place: AirBnb
+#   place-url: https://airbnb.com/
 #   date: Sep 2019 - Present
 #   subtitle: Fullstack Developer
 #   tags:
@@ -15,10 +14,9 @@
 #     - tag: Javascript
 #     - tag: Ruby
 #     - tag: Rails
-#   timeline-side: right
 
-- title: UT Austin Code Camp
-  title-url: https://techbootcamps.utexas.edu/coding/
+- place: UT Austin Code Camp
+  place-url: https://techbootcamps.utexas.edu/coding/
   date: Jul 2020 - Present
   subtitle: Adjunct Instructor
   tags:
@@ -30,10 +28,10 @@
     - tag: React
     - tag: Node
     - tag: Heroku
-  timeline-side: left
+  timeline-side: right
 
-- title: NetworkIP
-  title-url: https://www.networkip.net
+- place: NetworkIP
+  place-url: https://www.networkip.net
   date: Mar 2011 - Oct 2020
   subtitle: Director of Web Development
   tags:
@@ -45,10 +43,10 @@
     - tag: MySQL
     - tag: Informix
     - tag: AWS
-  timeline-side: right
-
-- title: St. Edward's University
-  title-url: https://www.stedwards.edu/
-  date: Aug 2005 - Aug 2009
-  subtitle: Bachelor of Science, Bioinformatics
   timeline-side: left
+
+- place: St. Edward's University
+  place-url: https://www.stedwards.edu/
+  date: Aug 2005 - Aug 2009
+  subtitle: B. Sc., Bioinformatics
+  timeline-side: right

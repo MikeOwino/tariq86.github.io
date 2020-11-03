@@ -26,6 +26,9 @@ $(document).ready(function () {
     // Initialize AOS
     AOS.init();
 
+    // Initialize Timeline
+    $('.timeline').timeline();
+
     randomizeOrder();
 });
 

@@ -38,9 +38,12 @@
     <!-- AOS Script -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     {% if site.linkedin_username != null %}
-    <!-- LinkedIn JS (for badge) -->
+    <!-- LinkedIn JS (for Contact badge) -->
     <script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
     {% endif %}
+    <!-- Timeline JS+CSS -->
+    <script src="{{ "/assets/js/vendor/timeline.prod.min.js" | prepend: site.baseurl }}"></script>
+    <link rel="stylesheet" href="{{ "/assets/css/vendor/timeline.min.css" | prepend: site.baseurl }}">
     <!-- Site JS -->
     <script src="{{ "/assets/js/app.min.js" | prepend: site.baseurl }}"></script>
 </head>
