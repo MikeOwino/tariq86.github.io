@@ -66,4 +66,16 @@
   weight: 1
 
 - name: Jetbrains IDEs
+  weight: 1
+
+- name: Augmented Reality (AR)
+  weight: 2
+
+- name: Virtual Reality (VR)
+  weight: 2
+
+- name: WebRTC API
+  weight: 1
+
+- name: WebXR API
   weight: 2
