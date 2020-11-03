@@ -15,12 +15,11 @@
 #     - tag: Ruby
 #     - tag: Rails
 
-- place: UT Austin Code Camp
+- place: The Coding Boot Camp at UT Austin
   place-url: https://techbootcamps.utexas.edu/coding/
   date: Jul 2020 - Present
   subtitle: Adjunct Instructor
   tags:
-    - tag: Javascript
     - tag: ES6
     - tag: MERN
     - tag: MongoDB
@@ -41,7 +40,6 @@
     - tag: jQuery
     - tag: Vue
     - tag: MySQL
-    - tag: Informix
     - tag: AWS
   timeline-side: left
 
@@ -49,4 +47,9 @@
   place-url: https://www.stedwards.edu/
   date: Aug 2005 - Aug 2009
   subtitle: B. Sc., Bioinformatics
+  tags:
+    - tag: Biology
+    - tag: Chemistry
+    - tag: Mathematics
+    - tag: Computer Science
   timeline-side: right

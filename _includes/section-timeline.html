@@ -14,9 +14,6 @@
                 <div class="timeline__item__inner">
                     <div class="timeline__content__wrap">
                         <div class="timeline__content" data-aos="fade-down-{{ event.timeline-side }}">
-                            <h4 class="timeline__date">
-                                {{event.date}}
-                            </h4>
                             <h2 class="timeline__title">
                                 <small class="timeline__subtitle">{{event.subtitle}}</small>
                                 <small class="timeline__divider">&nbsp;@&nbsp;</small>
@@ -25,6 +22,9 @@
                                     <span>{{event.place}}</span>
                                 </a>
                             </h2>
+                            <h4 class="timeline__date">
+                                {{ event.date }}
+                            </h4>
                             {% if event.tags %}
                             <ul class="timeline__tags">
                                 {% for tag in event.tags %}
@@ -39,4 +39,28 @@
             {% endfor %}
         </div>
     </div>
+</div>
+
+<div class="mobile-timeline">
+    {% for event in site.data.timeline %}
+    <div class="timeline__content" data-aos="fade-{{ event.timeline-side }}">
+        <h2 class="timeline__title" data-aos="flip-up">
+            <small class="timeline__subtitle">{{event.subtitle}}</small>
+            <small class="timeline__divider">&nbsp;@&nbsp;</small>
+            <a href="{{event.place-url}}" class="highlight-link" target="_blank" rel="noopener noreferrer">
+                <span>{{event.place}}</span>
+            </a>
+        </h2>
+        <h4 class="timeline__date" data-aos="flip-down">
+            {{ event.date }}
+        </h4>
+        {% if event.tags %}
+        <ul class="timeline__tags">
+            {% for tag in event.tags %}
+            <li class="timeline__tag" data-aos="flip-up">{{tag.tag}}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+    </div>
+    {% endfor %}
 </div>
