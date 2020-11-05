@@ -5,10 +5,7 @@
     {% if site.email != null %}
     <a class="social-link email" aria-label="My E-Mail" href="mailto:{{site.email}}">
         <div class="social">
-            <svg class="social-svg" viewBox="0 0 48 48">
-                <use x="12" y="12" width="24" height="24" viewBox="0 0 48 48"
-                    xlink:href="{{ "/assets/img/solid.svg#envelope" | prepend: site.baseurl }}"></use>
-            </svg>
+            <span class="social-icon fas fa-envelope"></span>
         </div>
     </a>
     {% endif %}
@@ -17,10 +14,7 @@
     <a class="social-link github" aria-label="My GitHub" target="_blank" rel="noopener noreferrer"
         href="https://github.com/{{site.github_username}}">
         <div class="social">
-            <svg class="social-svg" viewBox="0 0 48 48">
-                <use x="12" y="12" width="24" height="24" viewBox="0 0 48 48"
-                    xlink:href="{{ "/assets/img/brands.svg#github" | prepend: site.baseurl }}"></use>
-            </svg>
+            <span class="social-icon fab fa-github"></span>
         </div>
     </a>
     {% endif %}
@@ -29,10 +23,7 @@
     <a class="social-link black" aria-label="My Codepen" target="_blank" rel="noopener noreferrer"
         href="https://codepen.io/{{site.codepen_username}}">
         <div class="social">
-            <svg class="social-svg" viewBox="0 0 48 48">
-                <use x="12" y="12" width="24" height="24" viewBox="0 0 48 48"
-                    xlink:href="{{ "/assets/img/brands.svg#codepen" | prepend: site.baseurl }}"></use>
-            </svg>
+            <span class="social-icon fab fa-codepen"></span>
         </div>
     </a>
     {% endif %}
@@ -41,10 +32,7 @@
     <a class="social-link black" aria-label="My DEV" target="_blank" rel="noopener noreferrer"
         href="https://dev.to/{{site.dev_username}}">
         <div class="social">
-            <svg class="social-svg" viewBox="0 0 48 48">
-                <use x="12" y="12" width="24" height="24" viewBox="0 0 48 48"
-                    xlink:href="{{ "/assets/img/brands.svg#dev" | prepend: site.baseurl }}"></use>
-            </svg>
+            <span class="social-icon fab fa-dev"></span>
         </div>
     </a>
     {% endif %}
@@ -53,10 +41,7 @@
     <a class="social-link linkedin" aria-label="My LinkedIn" target="_blank" rel="noopener noreferrer"
         href="https://www.linkedin.com/in/{{site.linkedin_username}}">
         <div class="social">
-            <svg class="social-svg" viewBox="0 0 48 48">
-                <use x="12" y="12" width="24" height="24" viewBox="0 0 48 48"
-                    xlink:href="{{ "/assets/img/brands.svg#linkedin-in" | prepend: site.baseurl }}"></use>
-            </svg>
+            <span class="social-icon fab fa-linkedin"></span>
         </div>
     </a>
     {% endif %}
@@ -65,10 +50,7 @@
     <a class="social-link pdf" aria-label="My Resume/CV" target="_blank" rel="noopener noreferrer"
         href="{{ site.cv_download_link }}">
         <div class="social">
-            <svg class="social-svg" viewBox="0 0 48 48">
-                <use x="12" y="12" width="24" height="24" viewBox="0 0 48 48"
-                    xlink:href="{{ "/assets/img/solid.svg#file-pdf" | prepend: site.baseurl }}"></use>
-            </svg>
+            <span class="social-icon fas fa-file-pdf"></span>
         </div>
     </a>
     {% endif %}
@@ -77,10 +59,7 @@
     <a class="social-link twitter" aria-label="My Twitter" target="_blank" rel="noopener noreferrer"
         href="https://twitter.com/{{site.twitter_username}}">
         <div class="social">
-            <svg class="social-svg" viewBox="0 0 48 48">
-                <use x="12" y="12" width="24" height="24" viewBox="0 0 48 48"
-                    xlink:href="{{ "/assets/img/brands.svg#twitter" | prepend: site.baseurl }}"></use>
-            </svg>
+            <span class="social-icon fab fa-twitter"></span>
         </div>
     </a>
     {% endif %}
