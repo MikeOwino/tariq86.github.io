@@ -532,31 +532,87 @@ a {
   }
 }
 
-.timeline__content {
-  background-color: $text-color;
-  color: $bg-color;
-  border-radius: $border-radius;
-  box-shadow: 5px 5px 4px #161718, -5px -5px 4px #404346;
+.mobile-timeline {
+  display: block;
+  .timeline__content {
+    &::after,
+    &::before {
+      border: none;
+      content: initial;
+      height: initial;
+      transform: initial;
+      top: initial;
+      right: initial;
+      z-index: initial;
+    }
+  }
+}
 
-  h2 {
+// Project Card styling -- used in
+// Timeline AND Projects sections
+.project-card {
+  background-color: $text-color !important;
+  color: $bg-color;
+  border-radius: $border-radius !important;
+  box-shadow: 5px 5px 4px #161718, -5px -5px 4px #404346;
+  margin-bottom: 1rem;
+  padding: 1rem;
+
+  .project-card-title {
     font-size: 1.4rem;
     margin: 0;
+    display: flex;
+    justify-content: space-between;
+
+    .fork-icon {
+      font-size: 1rem;
+      margin-right: 0.25rem;
+      position: relative;
+      top: -2px;
+    }
+
+    .project-links {
+      font-size: 1.25rem;
+      margin-top: 3px;
+      font-family: $font-family;
+
+      a {
+        color: $primary-color;
+        transition: $transition;
+        span {
+          transition: $transition;
+          color: $bg-color;
+        }
+
+        &:hover {
+          color: $secondary-color;
+          span {
+            color: $primary-color;
+          }
+        }
+      }
+    }
   }
 
-  .timeline__date {
+  .project-card-content {
+    padding: 0.5rem 0;
+    margin: 0.5rem 0;
+  }
+
+  .project-card-date {
     margin: 0.5rem 0;
     font-style: italic;
     font-weight: 400;
   }
 
-  .timeline__tags {
+  .project-card-tags {
     list-style: none;
-    display: inline;
-    margin: 0;
+    display: block;
+    margin: 1rem 0;
     padding: 0;
     font-size: 0.9rem;
 
-    .timeline__tag {
+    .project-card-tag {
       display: inline-block;
       border: 1px dotted $bg-color;
       padding: 3px;
@@ -574,25 +630,6 @@ a {
   }
 }
 
-.mobile-timeline {
-  display: block;
-  .timeline__content {
-    margin-bottom: 1rem;
-    text-align: center;
-
-    &::after,
-    &::before {
-      border: none;
-      content: initial;
-      height: initial;
-      transform: initial;
-      top: initial;
-      right: initial;
-      z-index: initial;
-    }
-  }
-}
-
 /***************************************************
  * PROJECTS SECTION
  ***************************************************/
@@ -600,50 +637,6 @@ a {
   > * {
     width: 95%;
   }
-  .project {
-    border-radius: $border-radius;
-    margin: 1rem 0;
-    padding: 0.5rem 1rem;
-
-    .name-link-wrapper {
-      display: flex;
-      justify-content: space-between;
-
-      .links {
-        font-size: 1.25rem;
-        margin: 1.25rem 0.25rem 0 0;
-      }
-    }
-
-    .project-name {
-      font-size: 1.25rem;
-
-      .fork-icon {
-        font-size: 1rem;
-        margin-right: 0.5rem;
-      }
-    }
-  }
-}
-
-.project-desc {
-  line-height: 1rem;
-}
-
-.project-stars-forks {
-  fill: $text-color;
-  font-family: $font-family;
-}
-
-.tag-wrapper {
-  margin: 1rem 0 0 0;
-}
-
-.tag {
-  border-radius: $border-radius;
-  display: inline-block;
-  margin-bottom: 0.25rem;
-  padding: 0.5rem;
 }
 
 /***************************************************

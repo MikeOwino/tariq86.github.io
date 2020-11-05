@@ -2,20 +2,24 @@
 <h1 class="title"><span>{{site.projects_title}}</span></h1>
 <div class="projects-wrapper">
     {% for project in site.data.projects %}
-    <div class="project neumorphism-card" data-aos="zoom-in-down">
-        <div class="name-link-wrapper">
-            <h3>{{project.name}}</h3>
-        </div>
-        <p class="project-desc">{{project.descr}}</p>
+    <div class="project-card" data-aos="zoom-in-down">
+        <h2 class="project-card-title">
+            {{ project.name }}
+        </h2>
+        <p class="project-card-content">
+            {{project.descr}}
+        </p>
         {% if project.demo %}
         <a class="highlight-link" href="{{project.demo}}" target="_blank" rel="noopener noreferrer">
             Demo
         </a>
         {% endif %}
         {% if project.tags %}
-        <div class="tag-wrapper">
+        <div class="project-card-tags">
             {% for tag in project.tags %}
-            <span class="tag neumorphism-card">{{tag.tag}}</span>
+            <span class="project-card-tag">
+                {{tag.tag}}
+            </span>
             {% endfor %}
         </div>
         {% endif %}
@@ -45,15 +49,15 @@
 <div class="projects-wrapper">
     {% for repository in filtered_repos %}
     {% unless site.projects.exclude.projects contains repository.name %}
-    <div class="project neumorphism-card" data-aos="zoom-in-down">
-        <div class="name-link-wrapper">
-            <h3 class="project-name">
+    <div class="project-card" data-aos="zoom-in-down">
+        <h2 class="project-card-title">
+            <span class="project-name">
                 {% if repository.fork == true %}
                 <span class="fork-icon fas fa-share-alt"></span>
                 {% endif %}
                 {{ repository.name }}
-            </h3>
-            <div class="links">
+            </span>
+            <span class="project-links">
                 {% if repository.stargazers_count != 0 %}
                 <a href="{{ repository.html_url }}/stargazers" class="project-stars-forks">
                     <span class="fas fa-star"></span>
@@ -66,24 +70,28 @@
                     {{ repository.forks_count }}
                 </a>
                 {% endif %}
+            </span>
+        </h2>
+        <p class="project-card-content">
+            {{repository.description}}
+        </p>
+        <div class="project-card-footer">
+            {% if repository.homepage != "" and repository.homepage != nil %}
+            <a class="highlight-link" href="{{repository.homepage}}" target="_blank" rel="noopener noreferrer">
+                Demo
+            </a>
+            {% endif %}
+            <a class="highlight-link" href="{{repository.html_url}}" target="_blank" rel="noopener noreferrer">
+                Github
+            </a>
+            {% if repository.topics %}
+            <div class="tag-wrapper project-card-tags">
+                {% for topic in repository.topics %}
+                <span class="tag project-card-tag">{{topic}}</span>
+                {% endfor %}
             </div>
+            {% endif %}
         </div>
-        <p class="project-desc">{{repository.description}}</p>
-        {% if repository.homepage != "" and repository.homepage != nil %}
-        <a class="highlight-link" href="{{repository.homepage}}" target="_blank" rel="noopener noreferrer">
-            Demo
-        </a>
-        {% endif %}
-        <a class="highlight-link" href="{{repository.html_url}}" target="_blank" rel="noopener noreferrer">
-            Github
-        </a>
-        {% if repository.topics %}
-        <div class="tag-wrapper">
-            {% for topic in repository.topics %}
-            <span class="tag neumorphism-card">{{topic}}</span>
-            {% endfor %}
-        </div>
-        {% endif %}
     </div>
     {% endunless %}
     {% endfor %}
