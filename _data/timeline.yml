@@ -31,17 +31,39 @@
 
 - place: NetworkIP
   place-url: https://www.networkip.net
-  date: Mar 2011 - Oct 2020
+  date: May 2017 - Oct 2020
   subtitle: Director of Web Development
   tags:
     - tag: PHP
     - tag: Laravel
-    - tag: Yii
-    - tag: jQuery
     - tag: Vue
     - tag: MySQL
     - tag: AWS
   timeline-side: left
+
+- place: NetworkIP
+  place-url: https://www.networkip.net
+  date: Nov 2014 - May 2017
+  subtitle: Manager, Releases/Research & Development
+  tags:
+    - tag: PHP
+    - tag: Yii
+    - tag: jQuery
+    - tag: R&D
+    - tag: CI/CD
+  timeline-side: right
+
+- place: NetworkIP
+  place-url: https://www.networkip.net
+  date: May 2013 - Oct 2014
+  subtitle: Sr. Web Applications Developer
+  timeline-side: left
+
+- place: NetworkIP
+  place-url: https://www.networkip.net
+  date: May 2011 - April 2013
+  subtitle: Jr. Web Applications Developer
+  timeline-side: right
 
 - place: St. Edward's University
   place-url: https://www.stedwards.edu/
@@ -52,4 +74,4 @@
     - tag: Chemistry
     - tag: Mathematics
     - tag: Computer Science
-  timeline-side: right
+  timeline-side: left
