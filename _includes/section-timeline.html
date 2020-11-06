@@ -14,21 +14,21 @@
                 <div class="timeline__item__inner">
                     <div class="timeline__content__wrap">
                         <div class="timeline__content project-card" data-aos="fade-down-{{ event.timeline-side }}">
-                            <h2 class="timeline__title project-card-title">
-                                <small class="timeline__subtitle">{{event.subtitle}}</small>
-                                <small class="timeline__divider">&nbsp;@&nbsp;</small>
-                                <a href="{{event.place-url}}" class="highlight-link" target="_blank"
-                                    rel="noopener noreferrer">
+                            <h2 class="project-card-title">
+                                <small class="project-card-subtitle">{{event.subtitle}}</small>
+                                <small class="project-card-title-divider">&nbsp;@&nbsp;</small>
+                                <a href="{{event.place-url}}" class="project-card-title-link highlight-link"
+                                    target="_blank" rel="noopener noreferrer">
                                     <span>{{event.place}}</span>
                                 </a>
                             </h2>
-                            <h4 class="timeline__date project-card-date">
+                            <h4 class="project-card-date">
                                 {{ event.date }}
                             </h4>
                             {% if event.tags %}
-                            <ul class="timeline__tags project-card-tags">
+                            <ul class="project-card-tags">
                                 {% for tag in event.tags %}
-                                <li class="timeline__tag project-card-tag" data-aos="flip-up">{{tag.tag}}</li>
+                                <li class="project-card-tag" data-aos="flip-up">{{tag.tag}}</li>
                                 {% endfor %}
                             </ul>
                             {% endif %}
@@ -44,20 +44,21 @@
 <div class="mobile-timeline">
     {% for event in site.data.timeline %}
     <div class="timeline__content project-card" data-aos="fade-{{ event.timeline-side }}">
-        <h2 class="timeline__title project-card-title" data-aos="flip-up">
-            <small class="timeline__subtitle">{{event.subtitle}}</small>
-            <small class="timeline__divider">&nbsp;@&nbsp;</small>
-            <a href="{{event.place-url}}" class="highlight-link" target="_blank" rel="noopener noreferrer">
+        <h2 class="project-card-title" data-aos="flip-up">
+            <small class="project-card-subtitle">{{event.subtitle}}</small>
+            <small class="project-card-title-divider">&nbsp;@&nbsp;</small>
+            <a href="{{event.place-url}}" class="project-card-title-link highlight-link" target="_blank"
+                rel="noopener noreferrer">
                 <span>{{event.place}}</span>
             </a>
         </h2>
-        <h4 class="timeline__date project-card-date" data-aos="flip-down">
+        <h4 class="project-card-date" data-aos="flip-down">
             {{ event.date }}
         </h4>
         {% if event.tags %}
-        <ul class="timeline__tags project-card-tags">
+        <ul class="project-card-tags">
             {% for tag in event.tags %}
-            <li class="timeline__tag project-card-tag" data-aos="flip-up">{{tag.tag}}</li>
+            <li class="project-card-tag" data-aos="flip-up">{{tag.tag}}</li>
             {% endfor %}
         </ul>
         {% endif %}
