@@ -8,14 +8,14 @@ app_title: "@tariq86"
 # app_color: The app color, for mobile themes, etc.
 app_color: "#282c34"
 # description: This will be meta HTML tag content. This can be ignored.
-description: Tariq's personal website, powered by Github Pages and Jekyll
+description: Tariq's portfolio site, powered by Github Pages and Jekyll
 # baseurl: The subpath of your site
 # > set this to "", if you renamed the repository to <user>.github.io
 baseurl: ""
 
 # LANDING PAGE
 # username: This will displayed on the landing page as your name.
-username: Tariq Abusheikh
+username: Tariq
 # typing_text: This will be typed before 'scroll down for more'.
 # > set this to your job title, e.g. Fullstack Developer
 typing_text: Full-Stack Developer
@@ -117,6 +117,7 @@ google-analytics:
 
 plugins:
   - "jekyll-github-metadata"
+  - "jemoji"
 
 exclude:
   - tmp/
