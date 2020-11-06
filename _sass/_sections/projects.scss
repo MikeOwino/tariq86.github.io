@@ -1,12 +1,11 @@
-// Projects wrapper -- stacked on mobile
 .projects-wrapper {
-  display: grid;
-  grid-gap: var(--scroller-gutter);
-  grid-template-columns: var(--scroller-gutter);
-  grid-auto-flow: column;
-  grid-auto-columns: 80%;
-  grid-template-rows: minmax(200px, 1fr);
-  overflow-x: scroll;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  overflow-x: hidden;
+  > .project-card {
+    width: 100%;
+  }
 }
 
 @media only screen and (min-width: $large-screen) {
