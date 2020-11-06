@@ -12,7 +12,7 @@ const cp = require('child_process');
  */
 function styles() {
     return gulp
-        .src(['_sass/*.scss'])
+        .src(['_sass/main.scss'])
         .pipe(
             sass({
                 includePaths: ['scss'],
@@ -94,7 +94,7 @@ function watchScripts() {
 }
 
 function watchStyles() {
-    gulp.watch(['_sass/*.scss'], styles);
+    gulp.watch(['_sass/*.scss', '_sass/**/*.scss'], styles);
 }
 
 const compile = gulp.parallel(styles, scripts);

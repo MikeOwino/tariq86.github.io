@@ -1,0 +1,59 @@
+/***************************************************
+ * LAYOUT
+ ***************************************************/
+:root {
+  --scroller-gutter: 15px;
+}
+
+.hide-for-sm {
+  display: none !important;
+}
+
+.layout {
+  margin: 0.5rem;
+  padding: 0.5rem 0.5rem;
+  overflow-x: hidden;
+
+  .card {
+    background: $card-bg-color;
+    border-radius: $border-radius;
+    margin: 3rem 0;
+    padding: 1rem 2rem;
+
+    .title {
+      text-align: center;
+      position: relative;
+    }
+    .subtitle {
+      font-size: 1.25rem;
+      text-align: center;
+    }
+    .description {
+      font-size: 1.25rem;
+      text-align: justify;
+    }
+  }
+}
+
+@media only screen and (min-width: $medium-screen) {
+  .layout {
+    margin: 0.5rem auto;
+    padding: 0 3rem;
+    .card {
+      padding: 1rem 3rem;
+    }
+  }
+  .hide-for-md {
+    display: none !important;
+  }
+}
+
+@media only screen and (min-width: $large-screen) {
+  .layout {
+    padding: 5rem 5rem;
+  }
+
+  .hide-for-lg {
+    display: none !important;
+  }
+}

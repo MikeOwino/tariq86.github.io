@@ -1,7 +1,7 @@
 {% if site.show_projects %}
-<h1 class="title"><span>{{site.projects_title}}</span></h1>
+<h1 class="title">{{site.projects_title}}</h1>
 <div id="work-projects" class="projects-wrapper" data-aos="fade-down">
-    <div style="width: 0px !important;"></div>
+    <div class="hide-for-lg" style="width: 0px !important;"></div>
     {% for project in site.data.projects %}
     <div class="project-card">
         <h2 class="project-card-title">
@@ -31,6 +31,10 @@
 
 {% if site.show_os_projects %}
 <h1 class="title">{{site.os_projects_title}}</h1>
+<p class="subtitle hide-for-sm">
+    Scroll left/right for more information!
+</p>
+
 {% if site.projects.sort_by == 'stars' %}
 {% assign sort_order = 'stargazers_count', 'last' %}
 {% else %}
@@ -48,7 +52,7 @@
 {% endif %}
 
 <div id="foss-projects" class="projects-wrapper" data-aos="fade-up">
-    <div style="width: 0px !important;"></div>
+    <div class="hide-for-lg" style="width: 0px !important;"></div>
     {% for repository in filtered_repos %}
     {% unless site.projects.exclude.projects contains repository.name %}
     <div class="project-card">

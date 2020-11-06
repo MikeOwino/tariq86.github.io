@@ -1,0 +1,27 @@
+/***************************************************
+ * VARIABLES
+ ***************************************************/
+$small-screen: 360px;
+$medium-screen: 640px;
+$large-screen: 720px;
+$font-family: "Ubuntu", sans-serif;
+$font-size-base: 1rem;
+$font-size-h1: 2rem;
+$font-weight-strong: 600;
+$text-color: #dcdfe4;
+$transition: all 0.5s ease-in-out;
+$bg-color: #282c34;
+$border-radius: 2px;
+$card-bg-color: linear-gradient(
+  145deg,
+  rgba(115, 115, 115, 0.15) 15%,
+  #282c34 80%
+);
+$primary-color: #98c739;
+$secondary-color: #61afef;
+$third-color: #e06c75;
+$fourth-color: #e5c07b;
+
+$twitter-color: #1da1f2;
+$linkedin-color: #007bb6;
+$github-color: #000000;

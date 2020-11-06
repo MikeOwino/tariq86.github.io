@@ -1,0 +1,19 @@
+/***************************************************
+ * FOOTER
+ ***************************************************/
+.footer {
+  background: $bg-color;
+  color: $text-color;
+  margin: 0.5rem;
+  padding: 1rem;
+  text-align: center;
+  a {
+    color: $primary-color;
+
+    &:hover,
+    &:focus {
+      background: $bg-color;
+      color: $text-color;
+    }
+  }
+}

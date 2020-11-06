@@ -1,0 +1,81 @@
+/***************************************************
+ * CONTACT SECTION
+ ***************************************************/
+.LI-profile-badge {
+  text-align: center;
+  margin: 0 auto;
+}
+
+.contact-icons {
+  display: flex;
+  justify-content: center;
+
+  .social-link {
+    position: relative;
+    height: 3rem;
+    line-height: 3rem;
+    margin: 0.25rem;
+    text-align: center;
+    width: 3rem;
+
+    .social {
+      font-size: 1.5rem;
+    }
+
+    .social-icon {
+      color: $text-color;
+      transition: $transition;
+    }
+
+    &:hover {
+      cursor: pointer;
+      animation: jump 1s infinite alternate;
+
+      .social-icon {
+        color: $text-color;
+      }
+    }
+
+    &.email:hover {
+      .social-icon {
+        color: $primary-color;
+      }
+    }
+
+    &.github:hover {
+      .social-icon {
+        color: $github-color;
+      }
+    }
+
+    &.linkedin:hover {
+      .social-icon {
+        color: $linkedin-color;
+      }
+    }
+
+    &.twitter:hover {
+      .social-icon {
+        color: $twitter-color;
+      }
+    }
+
+    &.pdf:hover {
+      .social-icon {
+        color: $secondary-color;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: $medium-screen) {
+  .contact-icons .social-link {
+    width: 4rem;
+    height: 4rem;
+    line-height: 4rem;
+
+    .social {
+      font-size: 2rem;
+    }
+  }
+}

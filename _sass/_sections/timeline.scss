@@ -1,0 +1,62 @@
+/***************************************************
+ * TIMELINE SECTION
+ ***************************************************/
+.timeline {
+  display: none;
+
+  .timeline__items {
+    .timeline__item {
+      &::after {
+        background-color: $text-color;
+      }
+    }
+    .timeline__item--left {
+      text-align: right;
+
+      .timeline__content {
+        display: inherit;
+        &::after {
+          border-left: 11px solid $text-color;
+        }
+      }
+    }
+    .timeline__item--right {
+      text-align: left;
+
+      .timeline__content {
+        &::after {
+          border-right: 11px solid $text-color;
+        }
+      }
+    }
+  }
+}
+
+.mobile-timeline {
+  display: block;
+  .timeline__content {
+    &::after,
+    &::before {
+      border: none;
+      content: initial;
+      height: initial;
+      transform: initial;
+      top: initial;
+      right: initial;
+      z-index: initial;
+    }
+  }
+}
+
+@media only screen and (min-width: $medium-screen) {
+  .timeline {
+    display: block;
+
+    .project-card {
+      margin-bottom: 0;
+    }
+  }
+  .mobile-timeline {
+    display: none;
+  }
+}

@@ -1,0 +1,178 @@
+/***************************************************
+ * LANDING/GREETING SECTION
+ ***************************************************/
+#landing {
+  background: url("/assets/img/austin.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 0% 50%;
+  color: $text-color;
+  display: flex;
+  height: 100%;
+  text-align: center;
+
+  .landing-inner {
+    max-width: 95%;
+    margin: 0 auto;
+    padding: 0.75rem;
+    background: rgba(0, 0, 0, 0.25);
+    border-radius: $border-radius;
+  }
+
+  .landing-title {
+    left: 0;
+    margin: 0.5rem;
+    position: absolute;
+    right: 0;
+    top: 40%;
+  }
+
+  .landing-icons {
+    display: flex;
+    justify-content: center;
+
+    .social-link {
+      color: $text-color;
+      position: relative;
+      width: 4rem;
+      height: 4rem;
+      line-height: 4rem;
+      margin: 0.25rem;
+      transition: $transition;
+
+      .circle {
+        animation: outWaveOut 1s cubic-bezier(0.42, 0, 0.58, 1) forwards;
+        fill: $text-color;
+        stroke-dasharray: 40;
+        transition: $transition;
+        fill-opacity: 0;
+      }
+
+      .social {
+        font-size: 2rem;
+        position: absolute;
+        top: 0px;
+        transition: $transition;
+        width: 100%;
+      }
+
+      .social-icon {
+        color: white;
+      }
+
+      .label {
+        position: relative;
+        top: -4rem;
+        opacity: 0;
+        transition: $transition;
+      }
+
+      &:hover {
+        cursor: pointer;
+
+        .circle {
+          animation: outWaveIn 1s cubic-bezier(0.42, 0, 0.58, 1) forwards,
+            colorDefaultIcon 1s linear forwards;
+          fill-opacity: 1;
+        }
+
+        .social-icon {
+          color: $fourth-color;
+        }
+
+        .label {
+          opacity: 1;
+          top: -2rem;
+        }
+      }
+
+      &.github:hover {
+        .circle {
+          animation: outWaveIn 1s cubic-bezier(0.42, 0, 0.58, 1) forwards,
+            colorGithub 1s linear forwards;
+        }
+        .social-icon {
+          color: $github-color;
+        }
+      }
+
+      &.email:hover {
+        .circle {
+          animation: outWaveIn 1s cubic-bezier(0.42, 0, 0.58, 1) forwards,
+            colorEmail 1s linear forwards;
+        }
+        .social-icon {
+          color: $primary-color;
+        }
+      }
+
+      &.linkedin:hover {
+        .circle {
+          animation: outWaveIn 1s cubic-bezier(0.42, 0, 0.58, 1) forwards,
+            colorLinkedin 1s linear forwards;
+        }
+        .social-icon::before {
+          color: $linkedin-color;
+        }
+      }
+
+      &.twitter:hover {
+        .circle {
+          animation: outWaveIn 1s cubic-bezier(0.42, 0, 0.58, 1) forwards,
+            colorTwitter 1s linear forwards;
+        }
+        .social-icon {
+          color: $twitter-color;
+        }
+      }
+
+      &.pdf:hover {
+        .circle {
+          animation: outWaveIn 1s cubic-bezier(0.42, 0, 0.58, 1) forwards,
+            colorPdf 1s linear forwards;
+        }
+        .social-icon {
+          color: $secondary-color;
+        }
+      }
+    }
+  }
+
+  #txt-rotate {
+    border-bottom: 1px solid $text-color;
+    padding-bottom: 0.75rem;
+    margin: 0 0 0.75rem 0;
+  }
+}
+
+@media only screen and (min-width: $small-screen) {
+  #landing {
+    .landing-title {
+      top: 25%;
+      h1 {
+        font-size: 1.75rem;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: $medium-screen) {
+  #landing {
+    .landing-title {
+      .landing-inner {
+        max-width: 640px;
+        h1 {
+          font-size: 3rem;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: $large-screen) {
+  #landing {
+    .landing-title {
+      top: 40%;
+    }
+  }
+}

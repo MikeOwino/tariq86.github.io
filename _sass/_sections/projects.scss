@@ -1,0 +1,113 @@
+// Projects wrapper -- stacked on mobile
+.projects-wrapper {
+  display: grid;
+  grid-gap: var(--scroller-gutter);
+  grid-template-columns: var(--scroller-gutter);
+  grid-auto-flow: column;
+  grid-auto-columns: 80%;
+  grid-template-rows: minmax(200px, 1fr);
+  overflow-x: scroll;
+}
+
+// Project Card styling -- used in Timeline AND Projects sections
+.project-card {
+  padding: 1rem;
+  background-color: $text-color !important;
+  color: $bg-color;
+  border-radius: $border-radius !important;
+  box-shadow: 5px 5px 4px #161718, -5px -5px 4px #404346;
+  margin-bottom: 1rem;
+
+  .project-card-title {
+    font-size: 1.4rem;
+    margin: 0;
+    display: block;
+    width: 100%;
+    justify-content: space-between;
+
+    .project-card-subtitle {
+      display: inline-block;
+    }
+
+    .project-card-title-divider {
+      display: inline-block;
+    }
+
+    .fork-icon {
+      font-size: 1rem;
+      margin-right: 0.25rem;
+      position: relative;
+      top: -2px;
+    }
+
+    .project-links {
+      font-size: 1.25rem;
+      margin-top: 3px;
+      font-family: $font-family;
+      float: right;
+
+      a {
+        color: $primary-color;
+        transition: $transition;
+        span {
+          transition: $transition;
+          color: $bg-color;
+        }
+
+        &:hover {
+          color: $secondary-color;
+          span {
+            color: $primary-color;
+          }
+        }
+      }
+    }
+  }
+
+  .project-card-content {
+    padding: 0.5rem 0;
+    margin: 0.5rem 0;
+  }
+
+  .project-card-date {
+    margin: 0.5rem 0;
+    font-style: italic;
+    font-weight: 400;
+  }
+
+  .project-card-tags {
+    list-style: none;
+    display: block;
+    margin: 1rem 0;
+    padding: 0;
+    font-size: 0.9rem;
+
+    .project-card-tag {
+      display: inline-block;
+      border: 1px dotted $bg-color;
+      padding: 3px;
+      margin: 3px;
+      border-radius: 3px;
+      transition: $transition;
+      cursor: default;
+
+      &:hover {
+        background: $bg-color;
+        color: $text-color;
+        border: 1px dotted $text-color;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: $large-screen) {
+  .projects-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    overflow-x: hidden;
+    > .project-card {
+      width: 47%;
+    }
+  }
+}
