@@ -102,6 +102,9 @@ a {
 /***************************************************
  * LAYOUT
  ***************************************************/
+:root {
+  --scroller-gutter: 15px;
+}
 .layout {
   margin: 0.5rem;
   max-width: 1024px;
@@ -551,13 +554,24 @@ a {
 
 // Project Card styling -- used in
 // Timeline AND Projects sections
+.projects-wrapper {
+  display: grid;
+  grid-gap: var(--scroller-gutter);
+  grid-template-columns: var(--scroller-gutter);
+  grid-auto-flow: column;
+  grid-auto-columns: 80%;
+  grid-template-rows: minmax(200px, 1fr);
+  overflow-x: scroll;
+  padding-bottom: 1rem;
+}
+
 .project-card {
+  padding: 1rem;
   background-color: $text-color !important;
   color: $bg-color;
   border-radius: $border-radius !important;
   box-shadow: 5px 5px 4px #161718, -5px -5px 4px #404346;
   margin-bottom: 1rem;
-  padding: 1rem;
 
   .project-card-title {
     font-size: 1.4rem;
@@ -757,16 +771,25 @@ a {
     }
   }
 
-  //   .projects-wrapper {
-  //     // > * {
-  //     //   width: 45%;
-  //     // }
-  //   }
   .timeline {
     display: block;
+
+    .project-card {
+      margin-bottom: 0;
+    }
   }
   .mobile-timeline {
     display: none;
+  }
+
+  .projects-wrapper {
+    grid-auto-columns: calc(50% - var(--scroller-gutter) * 2);
+  }
+
+  // Hide scroller on large screens
+  // Remove if more than two projects!
+  #work-projects {
+    overflow-x: hidden;
   }
 
   // Adjust sizing of skills cloud
@@ -864,15 +887,6 @@ a {
     }
   }
 
-  .projects-wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    // > * {
-    //   width: 44%;
-    // }
-  }
-
   .contact-icons .social-link {
     width: 4rem;
     height: 4rem;
@@ -892,14 +906,6 @@ a {
   }
   .layout {
     padding: 5rem 5rem;
-  }
-}
-
-@media only screen and (min-width: 960px) {
-  .projects-wrapper {
-    > * {
-      width: 46%;
-    }
   }
 }
 
