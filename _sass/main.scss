@@ -106,6 +106,7 @@ a {
   margin: 0.5rem;
   max-width: 1024px;
   padding: 0.5rem 0.5rem;
+  overflow-x: hidden;
 
   .card {
     background: $card-bg-color;
@@ -514,6 +515,7 @@ a {
       text-align: right;
 
       .timeline__content {
+        display: inherit;
         &::after {
           border-left: 11px solid $text-color;
         }
@@ -636,15 +638,6 @@ a {
         border: 1px dotted $text-color;
       }
     }
-  }
-}
-
-/***************************************************
- * PROJECTS SECTION
- ***************************************************/
-.projects-wrapper {
-  > * {
-    width: 95%;
   }
 }
 
