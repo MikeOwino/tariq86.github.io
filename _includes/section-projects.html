@@ -1,29 +1,36 @@
 {% if site.show_projects %}
 <h1 class="title">{{site.projects_title}}</h1>
-<div id="work-projects" class="projects-wrapper" data-aos="fade-down">
+<div id="work-projects" class="projects-wrapper">
     <div class="hide-for-lg" style="width: 0px !important;"></div>
     {% for project in site.data.projects %}
-    <div class="project-card">
+    {% if fade_dir == 'right' %}
+    {% assign fade_dir = 'left' %}
+    {% else %}
+    {% assign fade_dir = 'right' %}
+    {% endif %}
+    <div class="project-card" data-aos="fade-down-{{ fade_dir }}">
         <h2 class="project-card-title">
             {{ project.name }}
         </h2>
         <p class="project-card-content">
             {{project.descr}}
         </p>
-        {% if project.demo %}
-        <a class="highlight-link" href="{{project.demo}}" target="_blank" rel="noopener noreferrer">
-            Demo
-        </a>
-        {% endif %}
-        {% if project.tags %}
-        <div class="project-card-tags">
-            {% for tag in project.tags %}
-            <span class="project-card-tag">
-                {{tag.tag}}
-            </span>
-            {% endfor %}
+        <div class="project-card-content">
+            {% if project.demo %}
+            <a class="highlight-link" href="{{project.demo}}" target="_blank" rel="noopener noreferrer">
+                Demo
+            </a>
+            {% endif %}
+            {% if project.tags %}
+            <div class="project-card-tags">
+                {% for tag in project.tags %}
+                <span class="project-card-tag">
+                    {{tag.tag}}
+                </span>
+                {% endfor %}
+            </div>
+            {% endif %}
         </div>
-        {% endif %}
     </div>
     {% endfor %}
 </div>
@@ -55,7 +62,12 @@
     <div class="hide-for-lg" style="width: 0px !important;"></div>
     {% for repository in filtered_repos %}
     {% unless site.projects.exclude.projects contains repository.name %}
-    <div class="project-card">
+    {% if fade_dir == 'right' %}
+    {% assign fade_dir = 'left' %}
+    {% else %}
+    {% assign fade_dir = 'right' %}
+    {% endif %}
+    <div class="project-card" data-aos="fade-down-{{ fade_dir }}">
         <h2 class="project-card-title">
             <span class="project-name">
                 {% if repository.fork == true %}
