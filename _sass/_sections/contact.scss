@@ -10,7 +10,7 @@
   display: flex;
   justify-content: center;
 
-  .social-link {
+  .contact-link {
     position: relative;
     height: 3rem;
     line-height: 3rem;
@@ -22,7 +22,7 @@
       font-size: 1.5rem;
     }
 
-    .social-icon {
+    .contact-icon {
       color: $text-color;
       transition: $transition;
     }
@@ -31,37 +31,37 @@
       cursor: pointer;
       animation: jump 1s infinite alternate;
 
-      .social-icon {
+      .contact-icon {
         color: $text-color;
       }
     }
 
     &.email:hover {
-      .social-icon {
+      .contact-icon {
         color: $primary-color;
       }
     }
 
     &.github:hover {
-      .social-icon {
+      .contact-icon {
         color: $github-color;
       }
     }
 
     &.linkedin:hover {
-      .social-icon {
+      .contact-icon {
         color: $linkedin-color;
       }
     }
 
     &.twitter:hover {
-      .social-icon {
+      .contact-icon {
         color: $twitter-color;
       }
     }
 
     &.pdf:hover {
-      .social-icon {
+      .contact-icon {
         color: $secondary-color;
       }
     }
@@ -69,7 +69,7 @@
 }
 
 @media only screen and (min-width: $medium-screen) {
-  .contact-icons .social-link {
+  .contact-icons .contact-link {
     width: 4rem;
     height: 4rem;
     line-height: 4rem;

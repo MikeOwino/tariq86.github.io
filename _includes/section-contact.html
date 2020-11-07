@@ -3,63 +3,63 @@
 
 <div class="contact-icons">
     {% if site.email != null %}
-    <a class="social-link email" aria-label="My E-Mail" href="mailto:{{site.email}}">
+    <a class="contact-link email" aria-label="My E-Mail" href="mailto:{{site.email}}">
         <div class="social">
-            <span class="social-icon fas fa-envelope"></span>
+            <span class="contact-icon fas fa-envelope"></span>
         </div>
     </a>
     {% endif %}
 
     {% if site.github_username != null %}
-    <a class="social-link github" aria-label="My GitHub" target="_blank" rel="noopener noreferrer"
+    <a class="contact-link github" aria-label="My GitHub" target="_blank" rel="noopener noreferrer"
         href="https://github.com/{{site.github_username}}">
         <div class="social">
-            <span class="social-icon fab fa-github"></span>
+            <span class="contact-icon fab fa-github"></span>
         </div>
     </a>
     {% endif %}
 
     {% if site.codepen_username != null %}
-    <a class="social-link black" aria-label="My Codepen" target="_blank" rel="noopener noreferrer"
+    <a class="contact-link black" aria-label="My Codepen" target="_blank" rel="noopener noreferrer"
         href="https://codepen.io/{{site.codepen_username}}">
         <div class="social">
-            <span class="social-icon fab fa-codepen"></span>
+            <span class="contact-icon fab fa-codepen"></span>
         </div>
     </a>
     {% endif %}
 
     {% if site.dev_username != null %}
-    <a class="social-link black" aria-label="My DEV" target="_blank" rel="noopener noreferrer"
+    <a class="contact-link black" aria-label="My DEV" target="_blank" rel="noopener noreferrer"
         href="https://dev.to/{{site.dev_username}}">
         <div class="social">
-            <span class="social-icon fab fa-dev"></span>
+            <span class="contact-icon fab fa-dev"></span>
         </div>
     </a>
     {% endif %}
 
     {% if site.linkedin_username != null %}
-    <a class="social-link linkedin" aria-label="My LinkedIn" target="_blank" rel="noopener noreferrer"
+    <a class="contact-link linkedin" aria-label="My LinkedIn" target="_blank" rel="noopener noreferrer"
         href="https://www.linkedin.com/in/{{site.linkedin_username}}">
         <div class="social">
-            <span class="social-icon fab fa-linkedin"></span>
+            <span class="contact-icon fab fa-linkedin"></span>
         </div>
     </a>
     {% endif %}
 
     {% if site.cv_download_link != null %}
-    <a class="social-link pdf" aria-label="My Resume/CV" target="_blank" rel="noopener noreferrer"
+    <a class="contact-link pdf" aria-label="My Resume/CV" target="_blank" rel="noopener noreferrer"
         href="{{ site.cv_download_link }}">
         <div class="social">
-            <span class="social-icon fas fa-file-pdf"></span>
+            <span class="contact-icon fas fa-file-pdf"></span>
         </div>
     </a>
     {% endif %}
 
     {% if site.twitter_username != null %}
-    <a class="social-link twitter" aria-label="My Twitter" target="_blank" rel="noopener noreferrer"
+    <a class="contact-link twitter" aria-label="My Twitter" target="_blank" rel="noopener noreferrer"
         href="https://twitter.com/{{site.twitter_username}}">
         <div class="social">
-            <span class="social-icon fab fa-twitter"></span>
+            <span class="contact-icon fab fa-twitter"></span>
         </div>
     </a>
     {% endif %}
