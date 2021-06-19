@@ -20,12 +20,12 @@ username: Tariq
 # > set this to your job title, e.g. Fullstack Developer
 typing_text: Full-Stack Developer
 # email: Your E-Mail address for the email button.
-email: tariq.abusheikh@gmail.com
+email: "tariq.86@pm.me"
 # For every social button you want to display, set your username or userid
 # If you do not use one of the following websites, then leave it empty
 # > twitter_username:
 github_username: tariq86
-linkedin_username: tariqabusheikh
+# linkedin_username:
 
 # ABOUT ME SECTION
 # show_aboutme_card:
@@ -82,7 +82,6 @@ show_contact_card: true
 # contact_title: The will be displayed as the title in the Contact section
 contact_title: Contact
 # contact_description: This will be displayed under the title.
-contact_description: <div class="LI-profile-badge"  data-version="v1" data-size="large" data-locale="en_US" data-type="vertical" data-theme="dark" data-vanity="tariqabusheikh"><a class="LI-simple-link" href='https://www.linkedin.com/in/tariqabusheikh?trk=profile-badge'>Tariq Abusheikh</a></div>
 
 # GITHUB-METADATA
 # Set this to your forked repository

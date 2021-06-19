@@ -1,24 +1,24 @@
 {
-    "name": "tariq86.github.io",
-    "version": "1.0.0",
-    "description": "Tariq's Portfolio Site",
-    "scripts": {
-        "dev": "gulp",
-        "build": "gulp build",
-        "watch": "gulp watch"
-    },
-    "author": "Tariq Abusheikh <tariq.abusheikh@gmail.com>",
-    "dependencies": {
-        "browser-sync": "^2.26.13",
-        "gulp": "^4.0.2",
-        "gulp-autoprefixer": "^7.0.1",
-        "gulp-concat": "^2.6.1",
-        "gulp-cssnano": "^2.1.3",
-        "gulp-rename": "^2.0.0",
-        "gulp-sass": "^4.1.0",
-        "gulp-uglify": "^3.0.2",
-        "js-yaml": "^3.14.0",
-        "lodash": "^4.17.20",
-        "node-sass": "^5.0.0"
-    }
+	"name": "tariq86.github.io",
+	"version": "1.0.0",
+	"description": "Tariq's Portfolio Site",
+	"scripts": {
+		"dev": "gulp",
+		"build": "gulp build",
+		"watch": "gulp watch"
+	},
+	"author": "Tariq86",
+	"dependencies": {
+		"browser-sync": "^2.26.13",
+		"gulp": "^4.0.2",
+		"gulp-autoprefixer": "^7.0.1",
+		"gulp-concat": "^2.6.1",
+		"gulp-cssnano": "^2.1.3",
+		"gulp-rename": "^2.0.0",
+		"gulp-sass": "^4.1.0",
+		"gulp-uglify": "^3.0.2",
+		"js-yaml": "^3.14.0",
+		"lodash": "^4.17.20",
+		"node-sass": "^5.0.0"
+	}
 }
