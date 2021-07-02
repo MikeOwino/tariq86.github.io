@@ -42,4 +42,7 @@ jobs:
           -v ${{ github.workspace }}:/srv/jekyll \
           -v ${{ github.workspace }}/_site:/srv/jekyll/_site \
           jekyll/builder:latest /bin/bash -c \
-          "chmod -R 777 /srv/jekyll && bundle config path vendor/bundle && bundle exec jekyll build --future"
+          "chmod -R 777 /srv/jekyll && \
+          bundle config path vendor/bundle && \
+          bundle install && \
+          bundle exec jekyll build --future"
